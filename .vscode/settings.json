@@ -1,0 +1,8 @@
+{
+    "emmet.preferences": {
+    },
+    "security.workspace.trust.enabled": false,
+    "emmet.includeLanguages":{
+        "javascript":"javascriptreact"
+    }
+}
