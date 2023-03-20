@@ -1,0 +1,9 @@
+.toastify {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+
+    background: var(--color-primary);
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+}

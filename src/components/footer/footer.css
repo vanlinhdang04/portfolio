@@ -13,8 +13,12 @@ footer a {
 .footer__logo {
     font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
     display: inline-block;
+
+    width: 4rem;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .permalinks {
@@ -54,4 +58,20 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+    
+}
+
+/* ============ MEDIA QUERIES (SMALL DEVICES) =============== */
+@media screen and (max-width: 600px) {
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    .footer__socials {
+        margin-bottom: 2.6rem;
+    }
 }

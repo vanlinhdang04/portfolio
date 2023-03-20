@@ -4,17 +4,22 @@ import { MdOutlineEmail } from 'react-icons/md'
 import { RiMessengerLine } from 'react-icons/ri'
 import { SiZalo } from 'react-icons/si'
 import emailjs from 'emailjs-com';
+import { useInView } from 'react-intersection-observer'
+import Toastify from '../toastify/Toastify'
 
 const Contact = () => {
+  const {ref, inView} = useInView();
   const form = useRef();
+  const [msg, setMsg] = React.useState('')
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_g1rcsbq', 'template_wbo9gcm', form.current, 'l7IEHlI4I6uQ5Chh1')
       .then((result) => {
-        alert('Submit Successfully')
+        setMsg('Submit Successfully')
       }, (error) => {
+        setMsg('Submit Failed')
         console.log(error.text);
       });
 
@@ -26,8 +31,8 @@ const Contact = () => {
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
 
-      <div className="container contact__container">
-        <div className="contact__options">
+      <div className="container contact__container" ref={ref}>
+        <div className={`contact__options ${inView ? 'animation-ltr':''}`}>
           <article className="contact__option">
             <MdOutlineEmail className='contact__option-icon' />
             <h4>Email</h4>
@@ -48,13 +53,14 @@ const Contact = () => {
           </article>
         </div>
         {/* END OF CONTACT OPTIONS */}
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} className={inView ? 'animation-rtl':''}>
           <input type="text" name='name' placeholder='Your Full Name' required />
           <input type="email" name='email' placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
           <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
       </div>
+      {Boolean(msg) && <Toastify msg={msg}/> }
     </section>
   )
 }

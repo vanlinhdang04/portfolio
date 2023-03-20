@@ -1,12 +1,17 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './footer.css'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { BiCodeAlt, BiHeart } from 'react-icons/bi'
+import IMG from '../../assets/logo.png'
 
 const Footer = () => {
   return (
     <footer>
-      <a href="#" className="footer__logo">Van_Linh</a>
+      <div className="footer__logo">
+        <img src={IMG} alt="logo" />
+      </div>
+      {/* <a href="#" className="footer__logo">Van_Linh</a> */}
 
       <ul className="permalinks">
         <li><a href="#">Home</a></li>

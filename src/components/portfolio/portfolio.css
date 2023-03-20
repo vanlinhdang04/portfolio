@@ -21,9 +21,17 @@
     border-radius: 1.5rem;
     overflow: hidden;
 }
+.portfolio__item-image > img {
+    aspect-ratio: 1.3;
+    object-fit: cover;
+}
 
 .portfolio__item h3 {
-    margin: 1.2rem 0 2rem;
+    margin: 1.2rem 0 0.2rem;
+}
+.portfolio_item-role {
+    color: var(--color-light);
+    margin-bottom: 1.8rem;
 }
 
 .portfolio__item-cta {

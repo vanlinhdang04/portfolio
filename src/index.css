@@ -19,11 +19,15 @@
   --color-light: rgba(255,255,255,0.6);
 
   --transition: all 400ms ease;
+  --transition-md: all 600ms;
+  --transition-lg: all 800ms;
+  --transition-xl: all 1000ms;
 
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
 }
+
 
 html {
   scroll-behavior: smooth !important;
@@ -114,6 +118,93 @@ img {
   width: 100%;
   object-fit: cover;
 }
+
+/* ANIMATION */
+
+/* KEYFRAMES ANIMATION */
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(105%)
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes topToBottom {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes hidden {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.animation-appear {
+  animation: appear 1s;
+}
+.animation-ltr {
+  animation: leftToRight 1s;
+}
+.animation-rtl {
+  animation: rightToLeft 1s;
+}
+.animation-ttb {
+  animation: topToBottom 1s;
+}
+.animation-btt {
+  animation: bottomToTop 1s;
+}
+.animation-hidden {
+  animation: hidden 1s forwards;
+}
+
 
 /* ============ MEDIA QUERIES (MEDIUM DEVICES) =============== */
 @media screen and (max-width: 1024px) {
