@@ -29,7 +29,7 @@ const data = [
   {
     id: 3,
     image: IMG4,
-    title: 'VietThien = Ecommerce Agricultural Products',
+    title: 'VietThien - Ecommerce Agricultural Products',
     // github: 'https://github.com',
     demo: 'https://travietthien.vn/',
     role: 'Frontend Contribution'
@@ -45,7 +45,7 @@ const data = [
 ]
 
 const Portfolio = () => {
-  const {ref, inView} = useInView()
+  const { ref, inView } = useInView()
 
   return (
     <section id='portfolio'>
@@ -55,7 +55,7 @@ const Portfolio = () => {
       <div className="container portfolio__container" ref={ref}>
         {
           data?.map((item) => (
-            <article className={`portfolio__item ${inView ? 'animation-appear':''}`} key={item.id}>
+            <article className={`portfolio__item ${inView ? 'animation-appear' : ''}`} key={item.id}>
               <div className="portfolio__item-image">
                 <img src={item.image} alt="" />
               </div>
@@ -64,7 +64,7 @@ const Portfolio = () => {
               <div className="portfolio__item-cta">
                 {item.github ?
                   <a href={item.github} className="btn" target='_blank' rel="noreferrer">Github</a>
-                  :<></>
+                  : <></>
                 }
                 <a href={item.demo} className="btn btn-primary" target='_blank' rel="noreferrer">Live Demo</a>
               </div>

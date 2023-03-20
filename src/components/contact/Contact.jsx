@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer'
 import Toastify from '../toastify/Toastify'
 
 const Contact = () => {
-  const {ref, inView} = useInView();
+  const { ref, inView } = useInView();
   const form = useRef();
   const [msg, setMsg] = React.useState('')
 
@@ -32,7 +32,7 @@ const Contact = () => {
       <h2>Contact Me</h2>
 
       <div className="container contact__container" ref={ref}>
-        <div className={`contact__options ${inView ? 'animation-ltr':''}`}>
+        <div className={`contact__options ${inView ? 'animation-ltr' : ''}`}>
           <article className="contact__option">
             <MdOutlineEmail className='contact__option-icon' />
             <h4>Email</h4>
@@ -46,21 +46,21 @@ const Contact = () => {
             <a href="https://m.me/vanlinh99" target='_blank' rel="noreferrer">Send a message</a>
           </article>
           <article className="contact__option">
-            <SiZalo className='contact__option-icon' />
+            <SiZalo className='contact__option-icon contact__option-zalo' />
             <h4>Zalo</h4>
             <h5>+84 395 482 136</h5>
             <a href="https://zalo.me/0395482136" target='_blank' rel="noreferrer">Send a message</a>
           </article>
         </div>
         {/* END OF CONTACT OPTIONS */}
-        <form ref={form} onSubmit={sendEmail} className={inView ? 'animation-rtl':''}>
+        <form ref={form} onSubmit={sendEmail} className={inView ? 'animation-rtl' : ''}>
           <input type="text" name='name' placeholder='Your Full Name' required />
           <input type="email" name='email' placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
           <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
       </div>
-      {Boolean(msg) && <Toastify msg={msg}/> }
+      {Boolean(msg) && <Toastify msg={msg} />}
     </section>
   )
 }

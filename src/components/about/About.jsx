@@ -7,7 +7,7 @@ import { VscFolderLibrary } from 'react-icons/vsc'
 import { useInView } from 'react-intersection-observer'
 
 const About = () => {
-  const {ref, inView} = useInView()
+  const { ref, inView } = useInView()
 
   return (
     <section id='about' ref={ref}>
@@ -15,14 +15,14 @@ const About = () => {
       <h2>About Me</h2>
 
       <div className="container about__container">
-        <div className={`about__me ${inView ?'animation-ltr':''}`}>
+        <div className={`about__me ${inView ? 'animation-ltr' : ''}`}>
           <div className="about__me-image">
             <img src={ME} alt='about' />
           </div>
         </div>
 
         <div className="about__content">
-          <div className={`about__cards ${inView ? 'animation-appear':''}`}>
+          <div className={`about__cards ${inView ? 'animation-appear' : ''}`}>
             <article className={"about__card"}>
               <FaAward className='about__icon' />
               <h5>Experience</h5>
@@ -37,16 +37,10 @@ const About = () => {
 
           </div>
 
-          <p className={inView ?'animation-rtl':''}>
-            Chua biet ghi gi 
-            Chua biet ghi gi 
-            Chua biet ghi gi 
-            Chua biet ghi gi 
-            Chua biet ghi gi 
-            Chua biet ghi gi 
-            Chua biet ghi gi 
+          <p className={inView ? 'animation-rtl' : ''}>
+            My name is Van Linh. Currently I am a Front-End Developer. I'm still trying to learn to become a Full-Stack Developer
           </p>
-          <a href="#contact" className={`btn btn-primary ${inView ?'animation-appear':''}`}>Let's Talk</a>
+          <a href="#contact" className={`btn btn-primary ${inView ? 'animation-appear' : ''}`}>Let's Talk</a>
         </div>
       </div>
     </section>

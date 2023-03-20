@@ -6,31 +6,31 @@ import { useInView } from 'react-intersection-observer';
 const frontend = [
   {
     title: 'HTML',
-    level: 'Experienced'
+    level: 'Intermediate'
   },
   {
     title: 'CSS',
-    level: 'Experienced'
+    level: 'Intermediate'
   },
   {
     title: 'JavaScript',
-    level: 'Experienced'
+    level: 'Intermediate'
   },
   {
     title: 'ReactJS',
-    level: 'Experienced'
+    level: 'Intermediate'
   },
   {
     title: 'NextJS',
-    level: 'Experienced'
+    level: 'Intermediate'
   },
   {
     title: 'Material UI',
-    level: 'Experienced'
+    level: 'Intermediate'
   },
   {
     title: 'Mantine UI',
-    level: 'Experienced'
+    level: 'Intermediate'
   },
   {
     title: 'Bootstrap',
@@ -41,16 +41,20 @@ const frontend = [
 const backend = [
   {
     title: 'NodeJS',
-    level: 'Elementary'
+    level: 'Starter'
   },
   {
     title: 'SQL Server',
-    level: 'Elementary'
+    level: 'Starter'
+  },
+  {
+    title: 'MongoDB',
+    level: 'Starter'
   },
 ]
 
 const Experience = () => {
-  const {ref, inView} = useInView()
+  const { ref, inView } = useInView()
 
   return (
     <section id='experience' ref={ref}>
@@ -58,7 +62,7 @@ const Experience = () => {
       <h2>My Experience</h2>
 
       <div className="container experience__container">
-        <div className={`experience__frontend ${inView ? 'animation-ltr':''}`}>
+        <div className={`experience__frontend ${inView ? 'animation-ltr' : ''}`}>
           <h3>Frontend Development</h3>
           <div className="experience__content">
             {frontend?.map((item) => (
@@ -74,7 +78,7 @@ const Experience = () => {
         </div>
         {/* ==== END OF FRONTEND */}
         {/* ==== START OF BACKEND */}
-        <div className={`experience__backend ${inView ? 'animation-rtl':''}`}>
+        <div className={`experience__backend ${inView ? 'animation-rtl' : ''}`}>
           <h3>Backend Development</h3>
           <div className="experience__content">
             {backend?.map((item) => (

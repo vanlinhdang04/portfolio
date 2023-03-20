@@ -1,7 +1,5 @@
 import React from 'react'
 import AVTR1 from '../../assets/avatar1.jpg'
-import AVTR2 from '../../assets/avatar2.jpg'
-import AVTR3 from '../../assets/avatar3.jpg'
 
 // import Swiper core and required modules
 import { Pagination } from 'swiper';
@@ -18,18 +16,6 @@ const data = [
     id: 1,
     avatar: AVTR1,
     name: 'Eva',
-    review: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur dolorem iure incidunt quis tempora voluptas omnis error libero, dolor quo suscipit deserunt sed beatae, minus commodi eius, esse vel iusto.'
-  },
-  {
-    id: 2,
-    avatar: AVTR2,
-    name: 'Adam',
-    review: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur dolorem iure incidunt quis tempora voluptas omnis error libero, dolor quo suscipit deserunt sed beatae, minus commodi eius, esse vel iusto.'
-  },
-  {
-    id: 3,
-    avatar: AVTR3,
-    name: 'Lucas',
     review: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur dolorem iure incidunt quis tempora voluptas omnis error libero, dolor quo suscipit deserunt sed beatae, minus commodi eius, esse vel iusto.'
   },
 ]
