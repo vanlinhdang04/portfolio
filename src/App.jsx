@@ -8,6 +8,7 @@ import Portfolio from './components/portfolio/Portfolio.jsx'
 // import Testimonials from './components/testimonials/Testimonials.jsx'
 import Contact from './components/contact/Contact.jsx'
 import Footer from './components/footer/Footer.jsx'
+import Popup from './components/popup/popup.jsx'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Portfolio/>
       {/* <Testimonials/> */}
       <Contact/>
+      <Popup/>
       <Footer/>
     </>
   )

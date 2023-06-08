@@ -7,27 +7,23 @@ import { BiBook, BiMessageSquareDetail } from 'react-icons/bi'
 import { CiViewList } from 'react-icons/ci'
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = React.useState('#')
+  // const [activeNav, setActiveNav] = React.useState('#')
 
   return (
     <nav>
-      <a href="#" className={activeNav === '#' ? 'active' : ''}
-        onClick={() => setActiveNav('#')}>
+      <a href="#">
         <AiOutlineHome />
         <div className="tooltip">Home</div>
       </a>
-      <a href="#about" className={activeNav === '#about' ? 'active' : ''}
-        onClick={() => setActiveNav('#about')}>
+      <a href="#about">
         <AiOutlineUser />
         <div className="tooltip">About</div>
       </a>
-      <a href="#experience" className={activeNav === '#experience' ? 'active' : ''}
-        onClick={() => setActiveNav('#experience')}>
+      <a href="#experience">
         <BiBook />
         <div className="tooltip">Experience</div>
       </a>
-      <a href="#portfolio" className={activeNav === '#portfolio' ? 'active' : ''}
-        onClick={() => setActiveNav('#portfolio')}>
+      <a href="#portfolio">
         <CiViewList />
         <div className="tooltip">Portfolio</div>
       </a>
@@ -36,8 +32,7 @@ const Nav = () => {
         <RiServiceLine />
         <div className="tooltip">Services</div>
       </a> */}
-      <a href="#contact" className={activeNav === '#contact' ? 'active' : ''}
-        onClick={() => setActiveNav('#contact')}>
+      <a href="#contact">
         <BiMessageSquareDetail />
         <div className="tooltip">Contact</div>
       </a>

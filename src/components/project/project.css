@@ -1,0 +1,30 @@
+.project {
+    padding: 16px;
+    background: var(--color-bg-variant);
+    /* color: black; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.project__img {
+    border-radius: 8px;
+    overflow: hidden;
+    /* width: 150px; */
+}
+.project__img img {
+}
+
+.project__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES) =============== */
+@media screen and (max-width: 1024px) {
+    .project {
+        flex-direction: column;
+    }
+}
