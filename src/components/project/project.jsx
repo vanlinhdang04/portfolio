@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./project.css";
-import IMG1 from "../../assets/portfolio1.jpg";
 import { CommonContext } from "../../context/CommonContext";
 
 const Project = () => {

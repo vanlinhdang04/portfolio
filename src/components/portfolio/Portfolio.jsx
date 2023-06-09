@@ -102,6 +102,14 @@ const Portfolio = () => {
             <h3>{item.title}</h3>
             <p className="portfolio_item-role">{item.role}</p>
             <div className="portfolio__item-cta">
+              <a
+                href={item.demo}
+                className="btn btn-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live
+              </a>
               {item.github ? (
                 <a
                   href={item.github}
@@ -114,16 +122,9 @@ const Portfolio = () => {
               ) : (
                 <></>
               )}
-              <a
-                href={item.demo}
-                className="btn btn-primary"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Live
-              </a>
+
               <div
-                className="btn btn-primary"
+                className="btn"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() =>

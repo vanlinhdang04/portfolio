@@ -15,10 +15,6 @@ const Overlay = () => {
     }
   }, [overlay]);
 
-  const closeOverlay = () => {
-    dispatch({ type: commonTypes.overlay.CLOSE });
-  };
-
   return (
     <div
       id="overlay"
