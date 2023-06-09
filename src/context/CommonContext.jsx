@@ -1,9 +1,10 @@
 import { createContext, useReducer } from "react";
-import { popupTypes } from "./types/commonTypes";
+import { popupTypes, overlayTypes } from "./types/commonTypes";
 
 const INITIAL_STATE = {
   overlay: false,
   popup: false,
+  contentPopup: null,
 };
 
 export const CommonContext = createContext(INITIAL_STATE);
@@ -15,8 +16,16 @@ const CommonReducer = (state, action) => {
         ...state,
         overlay: true,
         popup: true,
+        contentPopup: action.payload,
       };
     case popupTypes.CLOSE:
+      return {
+        ...state,
+        overlay: false,
+        popup: false,
+        contentPopup: null,
+      };
+    case overlayTypes.CLOSE:
       return {
         ...state,
         overlay: false,
@@ -35,6 +44,7 @@ export const CommonContextProvider = ({ children }) => {
       value={{
         overlay: state.overlay,
         popup: state.popup,
+        contentPopup: state.contentPopup,
         dispatch,
       }}
     >

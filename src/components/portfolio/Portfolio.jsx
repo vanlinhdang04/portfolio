@@ -5,6 +5,7 @@ import IMG2 from "../../assets/portfolio2.png";
 import IMG3 from "../../assets/portfolio3.jpg";
 import IMG4 from "../../assets/portfolio4.png";
 import IMG5 from "../../assets/portfolio5.png";
+import IMG6 from "../../assets/portfolio6.png";
 import { useInView } from "react-intersection-observer";
 import { CommonContext } from "../../context/CommonContext";
 import commonTypes from "../../context/types/commonTypes";
@@ -15,40 +16,65 @@ import commonTypes from "../../context/types/commonTypes";
 const data = [
   {
     id: 1,
+    image: IMG6,
+    title: "ZIP.URL - URL Shorten Website",
+    tech: "NodeJS (ExpressJS), EJS, Bootstrap",
+    desc: "ZIP.URL: Simplify your links with ease. Shorten and manage long URLs effortlessly.",
+    github: "https://github.com/vanlinhdang04/zipurl",
+    demo: "https://zipurl.onrender.com/",
+    role: "Personal Project",
+  },
+  {
+    id: 2,
     image: IMG1,
     title: "ZenOne - App Introduction",
+    tech: "ReactJS, NextJS, Mantine UI",
+    teamSize: 3,
+    desc: "ZenOne: Simplifying real estate investment with an intuitive app. Get comprehensive property information, market insights, and maximize your returns effortlessly.",
     // github: 'https://github.com',
     demo: "https://zenone.com.vn/",
     role: "Frontend Contribution",
   },
   {
-    id: 2,
+    id: 3,
     image: IMG2,
     title: "ZenGroup - Company Introduction",
+    tech: "ReactJS, NextJS, Mantine UI",
+    teamSize: 2,
+    desc: "Introducing ZenGroup: Your go-to for real estate and fashion solutions. Explore their impressive portfolio and discover the latest trends in one place.",
     // github: 'https://github.com',
     demo: "https://zengroup.com.vn/",
     role: "Frontend Contribution",
   },
   {
-    id: 3,
+    id: 4,
     image: IMG4,
     title: "VietThien - Ecommerce Agricultural Products",
+    tech: "ReactJS, NextJS, Mantine UI",
+    teamSize: 4,
+    desc: "Introducing VietThien: Your ultimate eCommerce destination for a wide range of high-quality products. Enjoy a seamless shopping experience with secure payments and efficient shipping services.",
     // github: 'https://github.com',
     demo: "https://travietthien.vn/",
     role: "Frontend Contribution",
   },
   {
-    id: 4,
+    id: 5,
     image: IMG3,
     title: "Fasmono - Ecommerce Fashion",
+    tech: "ReactJS, NextJS, Mantine UI",
+    teamSize: 4,
+    desc: "Fasmono: Your go-to fashion eCommerce destination. Discover trendy clothing and accessories with a seamless shopping experience.",
     // github: 'https://github.com',
     demo: "https://fasmono.vn/",
     role: "Frontend Contribution",
   },
   {
-    id: 5,
+    id: 6,
     image: IMG5,
     title: "ZenApp - Ecommerce Convenient Store",
+    tech: "ReactJS, Material UI",
+    teamSize: 6,
+    desc: "ZenApp: Redefining e-commerce with seamless shopping, secure payments, and a wide range of products. Experience convenience and satisfaction at your fingertips.",
     // github: 'https://github.com',
     demo: "https://zenapp.flexzen.app/",
     role: "Frontend Contribution",
@@ -94,13 +120,15 @@ const Portfolio = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Live Website
+                Live
               </a>
               <div
                 className="btn btn-primary"
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => dispatch({ type: commonTypes.popup.OPEN })}
+                onClick={() =>
+                  dispatch({ type: commonTypes.popup.OPEN, payload: item })
+                }
               >
                 Detail
               </div>

@@ -187,6 +187,15 @@ img {
   }
 }
 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .animation-appear {
   animation: appear 1s;
 }
@@ -204,6 +213,9 @@ img {
 }
 .animation-hidden {
   animation: hidden 1s forwards;
+}
+.animation-opacity {
+  animation: opacity 1s;
 }
 
 

@@ -12,13 +12,25 @@
     overflow: hidden;
     /* width: 150px; */
 }
+
 .project__img img {
+    border-radius: 8px;
 }
 
 .project__body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.project__content p {
+    color: var(--color-light);
+    padding: 4px 0;
+}
+
+.project__cta {
+    display: flex;
+    gap: 1rem;
 }
 
 
